@@ -537,7 +537,7 @@ header {
     border-left: 1px solid var(--accent-color);
 }
 
-/** Footer style */
+/**=============== Footer section ===============*/
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -546,14 +546,6 @@ header {
 
 .footer-container {
     display: flex;
-    gap: 120px;
-}
-
-/** Footer information */
-.footer-information {
-    display: flex;
-    flex-direction: column;
-    max-width: 264px;
 }
 
 /** Footer logo */
@@ -567,22 +559,31 @@ header {
     color: var(--light-color);
 }
 
-/** Footer slogan */
+/** Footer information */
+.footer-information {
+    display: flex;
+    flex-direction: column;
+    margin-right: 120px;
+    max-width: 264px;
+}
+
+
 .footer-slogan {
     color: var(--light-color);
 }
 
-/** Text "Social media" */
+
 .social-text {
     font-weight: 500;
     margin-bottom: 16px;
     color: var(--light-color);
 }
 
-/** Footer socials */
+/** Footer social */
 .footer-social {
     display: flex;
     flex-direction: column;
+    margin-right: 80px;
 }
 
 .footer-social .social-list {
@@ -594,6 +595,71 @@ header {
 .social-link.social-footer:hover,
 .social-link.social-footer:focus {
     background-color: var(--success-color);
+}
+
+/** Footer subscribe */
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.subscribe-text {
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: var(--light-color);
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-form-field {
+    margin-right: 24px;
+    width: 100%;
+}
+
+.subscribe-form-input {
+    padding: 8px 16px;
+    width: 100%;
+
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+    border: 1px solid var(--white-background-color);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--white-background-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.subscribe-form-input::placeholder {
+    color: var(--white-background-color);
+}
+
+/** Button (mail) in footer section */
+.subscribe-form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 16px;
+
+    background-color: var(--primary-brand-color);
+    color: var(--white-background-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+.subscribe-form-icon {
+    fill: var(--white-background-color);
+}
+
+/** Hover and focus for button (mail) in footer section */
+.subscribe-form-submit:hover,
+.subscribe-form-submit:focus {
+    background-color: var(--pressed-state-color);
 }
 
 /**=============== Backdrop ===============*/
