@@ -749,7 +749,7 @@ header {
     fill: var(--white-background-color);
 }
 
-/** Modal form  */
+/**=============== Modal form ===============*/
 .modal-text {
     margin-bottom: 16px;
     text-align: center;
@@ -786,11 +786,11 @@ header {
     width: 100%;
     height: 40px;
     padding-left: 38px;
-    /*!  */
+
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.04em;
-    /*!  */
+
     color: var(--dark-color);
     border: 1px solid var(--modal-overlay-color);
     border-radius: 4px;
@@ -805,17 +805,17 @@ header {
 }
 
 /** Transition for modal icon */
-.modal-form-input-icon {
+.input-icon {
     transition: fill var(--typical-transition);
 }
 
 /** Focus for modal icon*/
-.modal-form-input:focus~.modal-form-input-icon {
+.modal-form-input:focus~.input-icon {
     fill: var(--primary-brand-color);
 }
 
 /** Icon from modal */
-.modal-form-input-icon {
+.input-icon {
     position: absolute;
     top: 50%;
     left: 16px;
@@ -824,16 +824,20 @@ header {
 }
 
 /** Textarea from modal */
+label:nth-last-child(3) {
+    margin-bottom: 16px;
+}
+
 .modal-form-message {
     width: 100%;
     height: 120px;
     padding: 8px 16px;
     resize: none;
-    /*!  */
+
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.04em;
-    /*!  */
+
     color: var(--dark-color);
     border: 1px solid var(--modal-overlay-color);
     border-radius: 4px;
@@ -852,7 +856,7 @@ header {
 }
 
 /** Policy from modal */
-.modal-form-policy-text {
+.modal-form-policy-field {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
@@ -863,12 +867,10 @@ header {
 }
 
 /** Custom checkbox from modal */
-.modal-form-policy-text::before {
-    content: "";
-
-    display: block;
-    width: 16px;
-    height: 16px;
+.modal-form-policy-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 8px;
 
     border: 1px solid var(--modal-overlay-color);
@@ -880,16 +882,24 @@ header {
         background-image var(--typical-transition);
 }
 
-/** Active custom checkbox from modal */
-.modal-form-policy:checked+.modal-form-policy-text::before {
-    background-image: url(../images/checkbox.svg);
-    background-size: contain;
-    background-origin: border-box;
+/** Active checkbox modal form */
+.modal-form-policy:checked+.modal-form-policy-checkbox {
     background-color: var(--pressed-state-color);
     border-color: var(--pressed-state-color);
 }
 
-.modal-form-policy-text>a {
+/** Іcon in checkbox modal form*/
+.checkbox-icon {
+    opacity: 0;
+    fill: var(--light-color);
+}
+
+/** Active icon in checkbox modal form */
+.modal-form-policy:checked+.modal-form-policy-checkbox>.checkbox-icon {
+    opacity: 1;
+}
+
+.modal-form-policy-field>a {
     text-decoration: underline;
     color: #4D5AE5;
 }

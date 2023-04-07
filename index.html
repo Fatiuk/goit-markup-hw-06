@@ -447,14 +447,14 @@
             <span class="modal-form-description">Name</span>
             <span class="modal-form-input-wrapper">
               <input
-                type="name"
+                type="text"
                 name="user_name"
                 class="modal-form-input"
                 required
                 pattern="^[a-zA-Zа-яА-Я]+"
                 minlength="2"
               />
-              <svg class="modal-form-input-icon" width="18px" height="24px">
+              <svg class="input-icon" width="18px" height="24px">
                 <use href="./images/icons.svg#icon-name"></use>
               </svg>
             </span>
@@ -470,7 +470,7 @@
                 pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
                 title="Phone: XXX-XXX-XX-XX"
               />
-              <svg class="modal-form-input-icon" width="18px" height="24px">
+              <svg class="input-icon" width="18px" height="24px">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </span>
@@ -484,7 +484,7 @@
                 class="modal-form-input"
                 required
               />
-              <svg class="modal-form-input-icon" width="18px" height="24px">
+              <svg class="input-icon" width="18px" height="24px">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </span>
@@ -497,13 +497,18 @@
               placeholder="Text input"
             ></textarea>
           </label>
-          <input
-            id="user-policy"
-            type="checkbox"
-            name="user_policy"
-            class="modal-form-policy visually-hidden"
-          />
-          <label for="user-policy" class="modal-form-policy-text">
+          <label for="user-policy" class="modal-form-policy-field">
+            <input
+              id="user-policy"
+              type="checkbox"
+              name="user_policy"
+              class="modal-form-policy visually-hidden"
+            />
+            <span class="modal-form-policy-checkbox">
+              <svg class="checkbox-icon" width="16px" height="16px">
+                <use href="./images/icons.svg#icon-checkbox"></use>
+              </svg>
+            </span>
             I accept the terms and conditions of the&nbsp;
             <a href="">Privacy Policy</a>
           </label>
