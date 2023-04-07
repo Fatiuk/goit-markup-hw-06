@@ -574,8 +574,8 @@ header {
 
 
 .social-text {
-    font-weight: 500;
     margin-bottom: 16px;
+    font-weight: 500;
     color: var(--light-color);
 }
 
@@ -605,8 +605,8 @@ header {
 }
 
 .subscribe-text {
-    font-weight: 500;
     margin-bottom: 16px;
+    font-weight: 500;
     color: var(--light-color);
 }
 
@@ -622,6 +622,7 @@ header {
 .subscribe-form-input {
     padding: 8px 16px;
     width: 100%;
+    height: 40px;
 
     font-size: 12px;
     line-height: 2;
@@ -694,8 +695,10 @@ header {
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    min-width: 400px;
+    width: 408px;
     min-height: 576px;
+    padding: 24px;
+    padding-top: 72px;
 
     background-color: var(--modal-background-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -704,7 +707,7 @@ header {
     transition: transform var(--typical-transition);
 }
 
-/** Modal button  */
+/** Modal button (close) */
 .modal-button {
     position: absolute;
     top: 0;
@@ -733,15 +736,180 @@ header {
     transition: fill var(--typical-transition);
 }
 
-/** Hover and focus for modal button  */
+/** Hover and focus for modal button (close) */
 .modal-button:hover,
 .modal-button:focus {
     background-color: var(--pressed-state-color);
     border-color: transparent;
 }
 
-/** Hover and focus for modal icon  */
+/** Hover and focus for modal icon (close)  */
 .modal-button:hover .modal-button-icon,
 .modal-button:focus .modal-button-icon {
     fill: var(--white-background-color);
+}
+
+/** Modal form  */
+.modal-text {
+    margin-bottom: 16px;
+    text-align: center;
+
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.modal-form-field {
+    margin-bottom: 8px;
+}
+
+.modal-form-description {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text-color);
+}
+
+.modal-form-input-wrapper {
+    position: relative;
+    display: block;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+    /*!  */
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    /*!  */
+    color: var(--dark-color);
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 4px;
+
+    transition: border-color var(--typical-transition);
+}
+
+/** Focus for modal input */
+.modal-form-input:focus {
+    border-color: var(--primary-brand-color);
+    outline: none;
+}
+
+/** Transition for modal icon */
+.modal-form-input-icon {
+    transition: fill var(--typical-transition);
+}
+
+/** Focus for modal icon*/
+.modal-form-input:focus~.modal-form-input-icon {
+    fill: var(--primary-brand-color);
+}
+
+/** Icon from modal */
+.modal-form-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: var(--dark-color);
+}
+
+/** Textarea from modal */
+.modal-form-message {
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+    resize: none;
+    /*!  */
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    /*!  */
+    color: var(--dark-color);
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 4px;
+
+    transition: border-color var(--typical-transition);
+}
+
+.modal-form-message::placeholder {
+    color: var(--modal-overlay-color);
+}
+
+/** Focus for modal textarea */
+.modal-form-message:focus {
+    border-color: var(--primary-brand-color);
+    outline: none;
+}
+
+/** Policy from modal */
+.modal-form-policy-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text-color);
+}
+
+/** Custom checkbox from modal */
+.modal-form-policy-text::before {
+    content: "";
+
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    border: 1px solid var(--modal-overlay-color);
+    border-radius: 2px;
+    cursor: pointer;
+
+    transition:
+        background-color var(--typical-transition),
+        background-image var(--typical-transition);
+}
+
+/** Active custom checkbox from modal */
+.modal-form-policy:checked+.modal-form-policy-text::before {
+    background-image: url(../images/checkbox.svg);
+    background-size: contain;
+    background-origin: border-box;
+    background-color: var(--pressed-state-color);
+    border-color: var(--pressed-state-color);
+}
+
+.modal-form-policy-text>a {
+    text-decoration: underline;
+    color: #4D5AE5;
+}
+
+/** Button in modal form (send) */
+.modal-form-submit {
+    align-self: center;
+    padding: 16px 32px;
+
+    min-width: 169px;
+    min-height: 56px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary-brand-color);
+    color: var(--white-background-color);
+
+    transition: background-color var(--typical-transition);
+}
+
+/** Hover and focus for button in hero section */
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+    background-color: var(--pressed-state-color);
 }
