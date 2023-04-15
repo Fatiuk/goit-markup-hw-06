@@ -808,7 +808,7 @@ header {
 }
 
 /** Focus for modal icon*/
-.modal-form-input:focus~.input-icon {
+.modal-form-input:focus+.input-icon {
     fill: var(--primary-brand-color);
 }
 
